@@ -31,7 +31,7 @@ const CartContext = createContext<CartContextValue | undefined>(undefined)
 /**
  * Generate a deterministic compound key for product variant
  */
-export function generateVariantKey(productId: string, size?: string, color?: string): string {
+function generateVariantKey(productId: string, size?: string, color?: string): string {
   const normSize = (size || 'none').trim().toUpperCase()
   const normColor = (color || 'none').trim().toLowerCase()
   return `${productId}::${normSize}::${normColor}`

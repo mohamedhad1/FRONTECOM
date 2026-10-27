@@ -4,6 +4,8 @@ import { useAuth } from '../../store/auth.context'
 import { extractErrorMessage } from '../../api/client'
 import { Shield, Lock, Mail, Eye, EyeOff, ArrowLeft, Loader2, AlertCircle } from 'lucide-react'
 
+const CURRENT_YEAR = new Date().getFullYear()
+
 export const AdminLoginPage: React.FC = () => {
   const { login, isAuthenticated } = useAuth()
   const navigate = useNavigate()
@@ -161,7 +163,7 @@ export const AdminLoginPage: React.FC = () => {
 
       {/* Footer */}
       <div className="max-w-7xl mx-auto w-full text-center text-xs text-slate-600">
-        © {new Date().getFullYear()} ATELIER ECOM — Internal Administrative Gateway
+        © {CURRENT_YEAR} ATELIER ECOM — Internal Administrative Gateway
       </div>
     </div>
   )

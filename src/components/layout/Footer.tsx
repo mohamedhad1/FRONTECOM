@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Phone, ShieldCheck, Truck, RefreshCw, Heart } from 'lucide-react'
 
+const CURRENT_YEAR = new Date().getFullYear()
+
 export const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-950 text-slate-400 text-xs border-t border-slate-900 mt-auto">
@@ -96,7 +98,7 @@ export const Footer: React.FC = () => {
       {/* Copyright */}
       <div className="border-t border-slate-900 py-6 text-center text-slate-500">
         <p className="flex items-center justify-center gap-1">
-          &copy; {new Date().getFullYear()} ATELIER ECOM. All rights reserved. Crafted with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline" />
+          &copy; {CURRENT_YEAR} ATELIER ECOM. All rights reserved. Crafted with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 inline" />
         </p>
       </div>
     </footer>
